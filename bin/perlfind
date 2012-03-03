@@ -1,0 +1,6 @@
+#!/usr/bin/env perl
+# ABSTRACT: A more knowledgeable perldoc
+use warnings;
+use strict;
+use App::perlfind;
+App::perlfind->run;
