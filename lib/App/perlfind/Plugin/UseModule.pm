@@ -3,10 +3,12 @@ use 5.008;
 use strict;
 use warnings;
 use App::perlfind;
-our $VERSION = '2.04';
+our $VERSION = '2.05';
 App::perlfind->add_trigger(
     'matches.add' => sub {
         my ($class, $word, $matches) = @_;
+        # does it look like a package name?
+        return unless $$word =~ /^\w+(::\w+)*$/;
         my $try_module = sub {
             my $module = shift;
             eval "use $module;";

@@ -24,4 +24,4 @@ requires:
   Pod::Functions: 0
   Test::Differences: 0
   parent: 0
-version: 2.04
+version: 2.05
